@@ -9,7 +9,7 @@ on:
       zone_id:
         required: true
         description: 'Zone identifier'
-        default: 'defaultzone'
+        default: 'y1e48'
 
 jobs:
   neoload_cli_demo:
@@ -29,16 +29,14 @@ jobs:
       - name: Install NeoLoad CLI
         run: pip3 install -U neoload
 
-      - name: Get NeoLoad project
-        run: |
-          rm -f *.yml
-          wget https://raw.githubusercontent.com/Neotys-Labs/neoload-cli/master/tests/neoload_projects/simpledemo.yml
+      - name: Validate project
+        run: neoload validate git.yaml
 
       - name: Prepare NeoLoad test
         run: |
           neoload login --url "$API_URL" "$NEOLOAD_TOKEN" \
-            test-settings --zone "$ZONE_ID" --scenario 'simpledemo' createorpatch "My Github Test With CLI" \
-            project --path simpledemo.yml upload
+            test-settings --zone "$ZONE_ID" --scenario 'testScenario1' createorpatch "My Github Test With CLI" \
+            project --path git.yaml upload
 
       - name: NeoLoad run test
         run: |
@@ -51,7 +49,7 @@ jobs:
 
       - name: Generate Test Report
         id: report
-        if: ${{ always() }}
+        if: ${{ success() }}
         run: neoload test-results junitsla
 
       - name: Publish Test Report
