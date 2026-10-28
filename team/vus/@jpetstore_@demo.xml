@@ -1,0 +1,37 @@
+<virtual-user errorPolicy="DO_NOTHING"
+    failedAssertionPolicy="DO_NOTHING" slaProfileEnabled="false"
+    type="LEGACY" uid="Jpetstore_Demo">
+    <init-container element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" weightsEnabled="false">
+        <description>Elements executed once when the Virtual User starts.</description>
+        <weighted-embedded-action uid="b2ee83eb-8b51-4911-95f9-3e64ae209c32"/>
+        <weighted-embedded-action uid="2b659ad0-9603-4017-ba9f-327d7b6e2804"/>
+        <weighted-embedded-action uid="51a0e305-a2f6-4a77-b4da-c8c76a43d699"/>
+        <weighted-embedded-action uid="ba49ec90-84f7-4cc1-aec2-ddbb879ed5ab"/>
+    </init-container>
+    <actions-container clearUserIterationDataMode="AUTO"
+        element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" weightsEnabled="false">
+        <description>Elements repeated until the Virtual User stops.</description>
+        <weighted-embedded-action uid="0ca2aa1f-9aad-4707-a294-7943cb3201a6"/>
+        <weighted-embedded-action uid="636a6da1-7225-4fbe-ac58-d9146ce194ec"/>
+        <weighted-embedded-action uid="015b5a0c-becf-4519-abb5-b68ff45f8942"/>
+        <weighted-embedded-action uid="97a23160-618d-4372-a48a-38490cd70e78"/>
+        <weighted-embedded-action uid="5a7a26cd-e453-4aa8-a456-ddf279a04a84"/>
+        <weighted-embedded-action uid="90cdb3c2-639a-456e-83b2-bb5e8a841e69"/>
+        <weighted-embedded-action uid="1a177e34-4521-4c03-a4c7-0a984d182076"/>
+        <weighted-embedded-action uid="e52cb931-e8ab-489e-b5fb-aa060f533274"/>
+    </actions-container>
+    <end-container element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" weightsEnabled="false">
+        <description>Elements executed before the Virtual User stops.</description>
+        <weighted-embedded-action uid="350d6bf5-6951-4408-89ac-c209d16c4831"/>
+    </end-container>
+    <extraJsonData><![CDATA[{}]]></extraJsonData>
+    <thinktime-policy thinkTimeMode="MODE_SIMPLE_THINK_TIME"
+        thinktimeFactorValue="100" thinktimePolicy="0"
+        thinktimeRangeValue="0" thinktimeValue="5000"/>
+</virtual-user>

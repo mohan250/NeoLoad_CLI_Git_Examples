@@ -1,0 +1,35 @@
+<virtual-user errorPolicy="DO_NOTHING"
+    failedAssertionPolicy="DO_NOTHING" slaProfileEnabled="false"
+    type="LEGACY" uid="Demo">
+    <init-container element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" weightsEnabled="false">
+        <description>Elements executed once when the Virtual User starts.</description>
+        <weighted-embedded-action uid="ead7f82d-91e8-45cf-ad05-fced5b3b39a2"/>
+        <weighted-embedded-action uid="368c6348-8a1a-478e-94e8-797221bb261c"/>
+        <weighted-embedded-action uid="209d31f6-f276-4ea0-b0f7-7b6d750af6e7"/>
+    </init-container>
+    <actions-container clearUserIterationDataMode="AUTO"
+        element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" weightsEnabled="false">
+        <description>Elements repeated until the Virtual User stops.</description>
+        <weighted-embedded-action uid="17d1f8dc-915d-43d3-9c25-d80cd34332b5"/>
+        <weighted-embedded-action uid="f3057b4c-cd95-46f2-9226-0dafcf875e68"/>
+        <weighted-embedded-action uid="7598ae67-8639-476e-8aec-0708ffdf4b9f"/>
+        <weighted-embedded-action uid="10405d2a-edb3-45d7-b84e-d96ba64fc4b0"/>
+        <weighted-embedded-action uid="c01b0af3-847b-40f1-83bf-b45fd79be4f5"/>
+        <weighted-embedded-action uid="b733147a-1df2-4e84-9d1d-baa0358abb32"/>
+        <weighted-embedded-action uid="d299a7c7-6aab-45e6-80ab-5a8aa7d7a5db"/>
+        <weighted-embedded-action uid="3bea46a9-1b58-42a6-b43f-c0af55328ca3"/>
+    </actions-container>
+    <end-container element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" weightsEnabled="false">
+        <description>Elements executed before the Virtual User stops.</description>
+        <weighted-embedded-action uid="959b20fa-a2ce-480b-a39d-b64910ccde76"/>
+    </end-container>
+    <thinktime-policy thinkTimeMode="MODE_SIMPLE_THINK_TIME"
+        thinktimeFactorValue="100" thinktimePolicy="0"
+        thinktimeRangeValue="0" thinktimeValue="5000"/>
+</virtual-user>

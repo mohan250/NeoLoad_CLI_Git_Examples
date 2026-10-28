@@ -1,0 +1,6 @@
+<basic-logical-action-container element-number="1" execution-type="0"
+    name="Click Category -fish" pacingEnd="0"
+    pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+    slaProfileEnabled="false" uid="0ca2aa1f-9aad-4707-a294-7943cb3201a6" weightsEnabled="false">
+    <weighted-embedded-action uid="784d8535-83e2-4993-8f16-dd52aaf34530"/>
+</basic-logical-action-container>

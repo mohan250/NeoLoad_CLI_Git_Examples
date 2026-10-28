@@ -1,0 +1,39 @@
+<http-page executeResourcesDynamically="false"
+    forceEncodingForDynamicResources="false"
+    name="/jpetstore/shop/index.shtml" playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/vus/@jpetstore_@demo/%resources%/recorded-artifacts/472c9ea4-cec8-418e-9387-7dafcd07d1ef.zip"
+    slaProfileEnabled="false" thinkTime="6018"
+    thinkTimeMode="MODE_SIMPLE_THINK_TIME" thinkTimeRangeEnd=""
+    thinkTimeRangeStart="" uid="472c9ea4-cec8-418e-9387-7dafcd07d1ef">
+    <embedded-action>daf53521-6c46-4bd4-9c02-52103c6b56ba</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_472c9ea4-cec8-418e-9387-7dafcd07d1ef.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" contentType="text/html;charset=ISO-8859-1"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/jpetstore/shop/index.shtml"
+    path="/jpetstore/shop/index.shtml" postType="6"
+    recordedArtifactZipFileName="team/vus/@jpetstore_@demo/%resources%/recorded-artifacts/472c9ea4-cec8-418e-9387-7dafcd07d1ef.zip"
+    recordedResponseCode="200" responseSize="6350"
+    serverUid="tri-hc2rcc4" slaProfileEnabled="false"
+    uid="daf53521-6c46-4bd4-9c02-52103c6b56ba" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_daf53521-6c46-4bd4-9c02-52103c6b56ba.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_daf53521-6c46-4bd4-9c02-52103c6b56ba.txt</requestContentFileDescription>
+    <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="en-US,en;q=0.9"/>
+    <header name="Host" value="tri-hc2rcc4:8080"/>
+    <header name="Proxy-Connection" value="keep-alive"/>
+    <header name="Referer" value="http://tri-hc2rcc4:8080/jpetstore/"/>
+    <header name="Upgrade-Insecure-Requests" value="1"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"/>
+    <responseHeaders>HTTP/1.1 200 OK&#xd;
+Server: Apache-Coyote/1.1&#xd;
+Set-Cookie: JSESSIONID=A47A7C60ADC1760FAB2FAFD413B7619F; Path=/jpetstore&#xd;
+Content-Type: text/html;charset=ISO-8859-1&#xd;
+Content-Length: 6350&#xd;
+Date: Tue, 15 Sep 2026 06:34:43 GMT</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>

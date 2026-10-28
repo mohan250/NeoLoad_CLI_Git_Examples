@@ -1,0 +1,47 @@
+<http-page executeResourcesDynamically="false"
+    forceEncodingForDynamicResources="false"
+    name="/jpetstore/shop/viewCategory.shtml"
+    playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/vus/@demo/%resources%/recorded-artifacts/9d86b5e0-a31d-455b-ad29-7d333d78a371.zip"
+    slaProfileEnabled="false" thinkTime="17481"
+    thinkTimeMode="MODE_SIMPLE_THINK_TIME" thinkTimeRangeEnd=""
+    thinkTimeRangeStart="" uid="9d86b5e0-a31d-455b-ad29-7d333d78a371">
+    <embedded-action>a40177c4-21b1-4d30-9150-ed06aa165189</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_9d86b5e0-a31d-455b-ad29-7d333d78a371.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" contentType="text/html;charset=ISO-8859-1"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/jpetstore/shop/viewCategory.shtml"
+    path="/jpetstore/shop/viewCategory.shtml" postType="6"
+    recordedArtifactZipFileName="team/vus/@demo/%resources%/recorded-artifacts/9d86b5e0-a31d-455b-ad29-7d333d78a371.zip"
+    recordedResponseCode="200"
+    refererUid="de9f5d46-caeb-4b2e-910b-0e7352ed63d0"
+    responseSize="3617" serverUid="tri-hc2rcc4"
+    slaProfileEnabled="false" uid="a40177c4-21b1-4d30-9150-ed06aa165189" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_a40177c4-21b1-4d30-9150-ed06aa165189.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_a40177c4-21b1-4d30-9150-ed06aa165189.txt</requestContentFileDescription>
+    <parameter encodeName="true" encodeValue="true" name="categoryId"
+        recordRawValue="CATS" separator="=" value="CATS" valueMode="USE_VALUE"/>
+    <parameter encodeName="true" encodeValue="true" name="id"
+        recordRawValue="1791535705527" separator="="
+        value="1791535705527" valueMode="USE_VALUE"/>
+    <header name="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="en-US,en;q=0.9"/>
+    <header name="Cookie" value="JSESSIONID=5236DBDEFE783C289BE8863EC0EFE9CE"/>
+    <header name="Host" value="tri-hc2rcc4:8080"/>
+    <header name="Proxy-Connection" value="keep-alive"/>
+    <header name="Referer" value="http://tri-hc2rcc4:8080/jpetstore/shop/signon.shtml"/>
+    <header name="Upgrade-Insecure-Requests" value="1"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"/>
+    <responseHeaders>HTTP/1.1 200 OK&#xd;
+Server: Apache-Coyote/1.1&#xd;
+Content-Type: text/html;charset=ISO-8859-1&#xd;
+Content-Length: 3617&#xd;
+Date: Fri, 09 Oct 2026 08:48:43 GMT</responseHeaders>
+    <record-html-infos extractorContent="" extractorOccurence="13"
+        extractorRegExp="false" htmlType="1"/>
+</http-action>
