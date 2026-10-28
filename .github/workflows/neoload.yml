@@ -34,8 +34,8 @@ jobs:
 
       - name: Prepare NeoLoad test
         run: |
-          neoload login --url "$API_URL" "$NEOLOAD_TOKEN" \
-            test-settings --zone "$ZONE_ID" --scenario 'testScenario1' createorpatch "My Github Test With CLI" \
+          neoload --debug login --url "$API_URL" "$NEOLOAD_TOKEN" \
+            test-settings --zone "$ZONE_ID" --scenario 'testScenario1' createorpatch "GitHub Demo Test 01" \
             project --path git.yaml upload
 
       - name: NeoLoad run test
