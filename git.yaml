@@ -1,0 +1,28 @@
+name: My Demo Project
+
+servers:
+  - name: myserver
+    host: example.com
+    port: 443
+    scheme: https
+
+user_paths:
+  - name: homepage
+    actions:
+      steps:
+        - request:
+            url: /
+            server: myserver
+
+populations:
+  - name: pop1
+    user_paths:
+      - name: homepage
+
+scenarios:
+  - name: testScenario1
+    populations:
+      - name: pop1
+        constant_load:
+          users: 5
+          duration: 1m
