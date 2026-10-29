@@ -17,7 +17,7 @@ permissions:
   checks: write
 
 env:
-  PROJECT_FILE: C:\temp\academy.yaml   # CHANGE HERE: use academy.yaml to take the file from GitHub instead
+  PROJECT_FILE: academy.yaml   # CHANGE HERE: use academy.yaml to take the file from GitHub instead
 
 jobs:
   neoload_academy:
