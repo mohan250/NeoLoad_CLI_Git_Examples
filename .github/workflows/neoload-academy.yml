@@ -31,7 +31,7 @@ jobs:
         run: pip install -U neoload
 
       - name: Login to NeoLoad Web
-        run: neoload login --url ${{ github.event.inputs.api_url }} ${{ secrets.NLW_TOKEN }}
+        run: neoload login --url ${{ github.event.inputs.api_url }} ${{ secrets.NEOLOAD_TOKEN }}
 
       - name: Validate YAML
         run: neoload validate "${{ env.PROJECT_FILE }}"
