@@ -1,0 +1,58 @@
+name: NeoLoad Github Action Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_url:
+        required: true
+        description: 'NeoLoad Web Api Url'
+        default: 'https://neoload-api.saas.neotys.com/'
+      zone_id:
+        required: true
+        description: 'Zone identifier'
+        default: 'y1e48'
+
+permissions:
+  contents: read
+  checks: write
+
+env:
+  PROJECT_FILE: C:\temp\academy.yaml   # CHANGE HERE: use academy.yaml to take the file from GitHub instead
+
+jobs:
+  neoload_academy:
+    name: NeoLoad Academy run
+    runs-on: self-hosted        # must run on the PC that has C:\temp\academy.yaml
+    steps:
+      - name: Checkout local code
+        uses: actions/checkout@v4
+
+      - name: Install NeoLoad CLI
+        run: pip install -U neoload
+
+      - name: Login to NeoLoad Web
+        run: neoload login --url ${{ github.event.inputs.api_url }} ${{ secrets.NLW_TOKEN }}
+
+      - name: Validate YAML
+        run: neoload validate "${{ env.PROJECT_FILE }}"
+
+      - name: Prepare NeoLoad test
+        run: neoload test-settings --zone ${{ github.event.inputs.zone_id }} --scenario scenario1 createorpatch "Academy Test"
+
+      - name: Upload project
+        run: neoload project --path "${{ env.PROJECT_FILE }}" upload
+
+      - name: NeoLoad run test
+        run: neoload run --external-url ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} --external-url-label "Github Action Run ${{ github.run_number }}" --name "Academy test - Github build ${{ github.run_number }}" --description "Started from Github Actions" --return-0
+
+      - name: Generate Test Report
+        id: report
+        if: ${{ always() }}
+        run: neoload test-results junitsla
+
+      - name: Publish Test Report
+        if: steps.report.outcome == 'success'
+        uses: scacap/action-surefire-report@v1
+        with:
+          report_paths: junit-sla.xml
+          fail_on_test_failures: true
