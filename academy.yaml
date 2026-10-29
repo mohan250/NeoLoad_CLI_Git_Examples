@@ -2,16 +2,16 @@ name: Academy_Project
 
 servers:
   - name: myserver
-    host: example.com        # CHANGE 1: your website host
-    port: 443
-    scheme: https
+    host: tri-hc2rcc4
+    port: 8080
+    scheme: http
 
 user_paths:
   - name: Demo
     actions:
       steps:
         - request:
-            url: /           # CHANGE 2: your page URL
+            url: /jpetstore/
             server: myserver
 
 populations:
@@ -24,5 +24,5 @@ scenarios:
     populations:
       - name: Population1
         constant_load:
-          users: 5           # CHANGE 3: number of users
+          users: 5
           duration: 2m30s
