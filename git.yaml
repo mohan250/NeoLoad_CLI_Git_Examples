@@ -1,28 +1,28 @@
-name: My Demo Project
+name: Academy_Project
 
 servers:
   - name: myserver
-    host: example.com
+    host: example.com        # CHANGE 1: your website host
     port: 443
     scheme: https
 
 user_paths:
-  - name: homepage
+  - name: Demo
     actions:
       steps:
         - request:
-            url: /
+            url: /           # CHANGE 2: your page URL
             server: myserver
 
 populations:
-  - name: pop1
+  - name: Population1
     user_paths:
-      - name: homepage
+      - name: Demo
 
 scenarios:
-  - name: testScenario1
+  - name: scenario1
     populations:
-      - name: pop1
+      - name: Population1
         constant_load:
-          users: 5
-          duration: 1m
+          users: 5           # CHANGE 3: number of users
+          duration: 2m30s
